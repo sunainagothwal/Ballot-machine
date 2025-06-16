@@ -337,6 +337,24 @@ th.side-col:nth-child(5) {
 }
 
 @media (max-width: 576px) {
+    .vvpat-overlay {
+        padding-top: 20px;
+        /* Add some padding to prevent it from being flush against the top */
+        align-items: center;
+        /* Center the modal vertically if needed */
+        justify-content: center;
+        /* Center the modal horizontally */
+    }
+
+    .vvpat-modal {
+        width: 100%;
+        max-width: 90%;
+        /* Ensure it doesn't overflow the viewport */
+        margin: auto;
+        /* Center the modal */
+    } }
+
+@media (max-width: 576px) {
     .ballot-slip {
         width: 120px;
         height: 170px;
@@ -361,24 +379,21 @@ th.side-col:nth-child(5) {
     }
 }
 
-@media (max-width: 375px) {
-    .candidate-name {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
+@media (max-width: 576px) {
 
     .footer-center,
     .footer-bottom {
         font-size: 13px;
     }
 }
+
 @media(max-width: 576px) {
     table {
         width: 70%;
         font-size: 9px;
         font-weight: bold;
         overflow-x: auto;
-        display: block;
+        /* display: block; */
     }
 
     thead {
@@ -400,16 +415,22 @@ th.side-col:nth-child(5) {
         word-wrap: break-word;
     }
 
-  th.symbol{
-    width: 20px;
-  }
+    .candidate-name {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+
+    th.symbol {
+        width: 20px;
+    }
+
     td.symbol {
         width: 40px;
     }
 
-    td.name {
+    /* td.name {
         width: 90px;/
-    }
+    } */
 
     td.button {
         width: 100px;
@@ -418,8 +439,8 @@ th.side-col:nth-child(5) {
 
     .voting_btn {
         padding: 4px;
-            font-size: 10px;
-            width: auto;
-            min-width: 50px;
+        font-size: 10px;
+        width: auto;
+        min-width: 50px;
     }
 }
