@@ -141,7 +141,6 @@ function handleVoteBtnPress(btnInfo) {
 
   const greenBulb = document.getElementById("green_blb");
   if (greenBulb) {
-    greenBulb.src = "./assets/bulb_red.png";
     greenBulb.style.backgroundColor = "red";
   }
   var beep = new Audio("./assets/beep.mpeg");
@@ -184,7 +183,7 @@ function showVVPATPopup(candidate) {
 
     const greenBulb = document.getElementById("green_blb");
     if (greenBulb) {
-      greenBulb.src = "./assets/green.png";
+      greenBulb.style.backgroundColor = "green";
     }
 
     document
