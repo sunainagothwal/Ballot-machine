@@ -1,11 +1,10 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 20px;
     color: #000;
-    background-color: #f8f8f8;
     background-color: #f2f2f2;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 .container {
@@ -39,13 +38,14 @@ body {
 }
 
 .main-title {
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
+    background-color: #3e3e92;
     text-align: center;
     font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 11px;
+    color: white;
+    display: block;
+    padding: 7px 2px;
 }
 
 .action-buttons {
@@ -57,8 +57,8 @@ body {
     flex-wrap: wrap;
 }
 
-.btn-demo {
-    background: linear-gradient(135deg, #3498db, #2980b9);
+.btn-demo,
+.btn-whatsapp {
     border: none;
     font-weight: 600;
     flex: 1;
@@ -68,15 +68,12 @@ body {
     transform: none !important;
 }
 
+.btn-demo {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
 .btn-whatsapp {
     background: linear-gradient(135deg, #25D366, #128C7E);
-    border: none;
-    font-weight: 600;
-    flex: 1;
-    min-width: 300px;
-    color: #fff;
-    animation: none !important;
-    transform: none !important;
 }
 
 .btn-demo:hover,
@@ -110,11 +107,9 @@ body {
     box-shadow: 2px 3px 3px #1b1a1a45;
 }
 
-
 .shadow-wrapper {
     width: 100%;
     position: relative;
-    /* display: inline-block; */
     padding: 15px 15px 15px 0;
     background-color: transparent;
     box-shadow:
@@ -143,49 +138,39 @@ body {
     right: 10%;
 }
 
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    border-spacing: 0;
-    border: none;
+    border: 3px solid #000;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 3px solid #000;
+    margin-left: 8px;
     vertical-align: middle;
-    /* box-shadow: 10px 10px 10px #898282 */
 }
 
-th {
-    background-color: #f1f1f1;
-    font-weight: bold;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 5px;
-}
-
-td,
-th {
+th,
+td {
     padding: 12px;
-    border: 1px solid lightblack;
     text-align: center;
-    border-radius: 5px;
     vertical-align: middle;
-}
-
-thead th.main-col {
-    background-color: #f2f2f2;
-    color: black;
-}
-
-thead th.side-col {
-    background-color: #f2f2f2;
-    color: black;
+    border-radius: 5px;
 }
 
 th.p-2 {
-    background-color: #b6cff0;
-    font-size: 23px;
+    background-color: #ebeff3;
+    font-size: 12px;
+}
+
+/* ✅ Updated Table Head Font-Size */
+thead th.main-col,
+thead th.side-col {
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 td.side-col:nth-child(4),
@@ -195,10 +180,10 @@ th.side-col:nth-child(5) {
     border: none;
 }
 
+/* Vote Button */
 .voting_btn {
     background-color: #304FFE;
     color: white;
-    /*  padding: 14px 27px; */
     padding: 10px 15px;
     border-radius: 20px;
     cursor: pointer;
@@ -221,6 +206,7 @@ th.side-col:nth-child(5) {
     transform: translateY(2px);
 }
 
+/* VVPAT Modal Styles */
 .vvpat-overlay {
     position: fixed;
     top: 0;
@@ -261,18 +247,8 @@ th.side-col:nth-child(5) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     top: 62%;
     left: 50%;
-}
-
-.slip {
-    width: 200px;
-    height: 300px;
-    background: white;
-    border: 1px solid black;
-    transform-origin: top;
-    animation: slipEject 1.5s ease-out forwards;
 }
 
 .slip-heading {
@@ -299,7 +275,6 @@ th.side-col:nth-child(5) {
 
 .slip-name {
     font-size: 14px;
-    font-weight: 500;
     font-weight: bold;
     text-align: center;
     flex: 1;
@@ -328,11 +303,10 @@ th.side-col:nth-child(5) {
     }
 }
 
+/* Footer */
 .footer {
     text-align: center;
     padding: 20px 10px;
-    align-items: center;
-    padding: 10px 20px;
     background-color: #2c2c8c;
     color: white;
     font-size: 14px;
@@ -353,17 +327,18 @@ th.side-col:nth-child(5) {
     margin-top: 5px;
 }
 
+/* ✅ Responsive Styles */
 @media (max-width: 576px) {
+    body {
+        padding: 5px;
+    }
+
     .container {
         padding: 0px;
     }
 
     .d-flex {
         padding-left: 0;
-    }
-
-    th.p-2 {
-        font-size: 15px;
     }
 
     .stimulated-polls-header {
@@ -382,60 +357,38 @@ th.side-col:nth-child(5) {
         width: 100%;
     }
 
-    table {
-        width: 70%;
+    th.main-col:nth-child(1),
+    td:nth-child(1) {
+        width: 8px;
+        /* Reduced more for mobile */
         font-size: 9px;
-        font-weight: bold;
-        overflow: hidden;
-        border-radius: 12px 0 0 12px;
+        padding: 3px;
     }
 
-    thead {
-        display: table-header-group;
-    }
-
-    tbody {
-        display: table-row-group;
-    }
-
-    tbody tr {
-        display: table-row;
-    }
-
-    tbody td {
-        display: table-cell;
-        padding: 9px;
-        border: 1px solid #ddd;
-        word-wrap: break-word;
-    }
-
-    .candidate-name {
-        font-size: 10px;
-        padding: 6px 10px;
-    }
-
-    th.symbol {
-        width: 20px;
-    }
-
-    td.symbol {
-        width: 40px;
-    }
-
-    /* td.name {
-                width: 90px;/
-            } */
-
-    td.button {
+    th.main-col:nth-child(2),
+    td:nth-child(2) {
         width: 100px;
-        text-align: center;
+        font-size: 10px;
+    }
+
+    th.main-col:nth-child(3),
+    td:nth-child(3) {
+        width: 40px;
+        padding: 4px;
+    }
+
+    th.side-col:nth-child(4),
+    td:nth-child(4),
+    th.side-col:nth-child(5),
+    td:nth-child(5) {
+        width: 40px;
+        padding: 4px;
     }
 
     .voting_btn {
-        padding: 4px;
-        font-size: 10px;
-        width: auto;
-        min-width: 50px;
+        padding: 13px;
+        font-size: 12px;
+        min-width: 57px;
     }
 
     .vvpat-overlay {
@@ -446,7 +399,7 @@ th.side-col:nth-child(5) {
 
     .vvpat-modal {
         width: 100%;
-        max-width: 90%;
+        max-width: 100%;
         margin: auto;
     }
 
@@ -455,7 +408,6 @@ th.side-col:nth-child(5) {
         height: 127px;
         top: 64% !important;
         left: 51%;
-        transform: translate(-50%, -100%);
     }
 
     .slip-heading {
@@ -472,16 +424,16 @@ th.side-col:nth-child(5) {
         font-size: 8px;
     }
 
-
-
     .footer-center,
     .footer-bottom {
         font-size: 13px;
     }
-}
 
-@media screen and (max-width: 414px) {
-    body {
-        padding: 5px;
+    /* ✅ Updated mobile table header font size */
+    thead th.main-col,
+    thead th.side-col {
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.1px;
     }
 }

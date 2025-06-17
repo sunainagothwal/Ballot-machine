@@ -173,8 +173,8 @@ function showVVPATPopup(candidate) {
   doneVoting.play();
 
   doneVoting.onended = function () {
-    slip.style.display = "none";
-    popup.style.display = "none";
+    // slip.style.display = "none";
+    // popup.style.display = "none";
 
     const bulbElement = document.getElementById("bulb-" + candidate.id);
     if (bulbElement) {
