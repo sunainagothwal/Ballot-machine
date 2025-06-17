@@ -55,7 +55,7 @@ const candidates = [
   },
   {
     id: 10,
-    name: "NOTA",
+    name: "",
     symbol: "",
   },
 ];
